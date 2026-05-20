@@ -166,13 +166,3 @@ water-monitoring-prototype/
     npm run dev
     ```
 4. Open your browser and navigate to `http://localhost:5173/` (or the port specified in your console).
-
----
-
-## 7. Future Research Extensions
-
-To advance this prototype for formal research publication, we suggest the following implementations:
-
-1. **Explainable AI (XAI)**: Integrate SHAP (SHapley Additive exPlanations) or LIME on the backend to append local feature contributions to the WebSocket packet when `ml_anomaly = True`. This lets operators see exactly _why_ a particular parameter combination was classified as contaminated.
-2. **Active Learning Feedback Loop**: Add a manual "Override False Positive" button in the frontend. When clicked, the payload should be sent to a backend SQLite store to retrain the Isolation Forest model dynamically, optimizing classifier boundary calibration.
-3. **Data Drift Monitoring**: Add a drift detection algorithm (e.g., Kolmogorov-Smirnov test) running every 1,000 samples to notify administrators when seasonal changes (such as natural summer TDS increases) require retraining the baseline model.
