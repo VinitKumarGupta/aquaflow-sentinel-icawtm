@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+body {
+  background-color: #f8fafc; /* Slate-50 light background */
+  color: #0f172a;            /* Slate-900 high contrast dark text */
+  font-family: 'Outfit', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbars matching the clean light theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;      /* Slate-100 scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;      /* Slate-300 thumb */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;      /* Slate-400 thumb on hover */
+}
